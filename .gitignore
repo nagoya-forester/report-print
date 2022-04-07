@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+public
+package-lock.json
+.graphqlconfig
+schema.graphql
+.idea/
+.env.local
+yarn.lock
