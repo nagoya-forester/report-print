@@ -1,0 +1,165 @@
+@use "reset";
+@use "variable";
+
+body {
+  font-size: 100%;
+  font-family: variable.$font;
+  font-weight: variable.$fw-400;
+  line-height: normal;
+  color: variable.$black;
+  @media screen {
+    padding: 3rem 0;
+    background-color: #5f6368;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+.a4 {
+  @media screen {
+    margin: 0 auto;
+  }
+  width: 210mm;
+  height: 297mm;
+  padding: 10mm 8mm;
+  background-color: variable.$white;
+}
+
+.a4_width {
+  @media screen {
+    margin: 0 auto;
+  }
+  width: 210mm;
+  padding: 10mm 8mm;
+  background-color: variable.$white;
+}
+//戻るボタン
+.back_index {
+  display: none;
+  @media screen {
+    display: block;
+    background-color: variable.$apnea-dive;
+    color: variable.$white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h_data {
+  text-align: right;
+}
+
+.m_title {
+  font-size: 20pt;
+  font-weight: variable.$fw-700;
+  text-align: center;
+}
+
+.m_display {
+  display: flex;
+
+  h2 {
+    font-weight: variable.$fw-700;
+    margin-right: 20pt;
+  }
+}
+
+.m_side {
+  display: flex;
+
+  .m_display {
+    margin-right: 40pt;
+  }
+}
+
+.m_member_list {
+  display: flex;
+
+  h3,
+  h2 {
+    font-weight: variable.$fw-700;
+  }
+}
+
+.m_member_list_data {
+  margin-left: 40pt;
+  display: flex;
+
+  h3 {
+    margin-right: 20pt;
+  }
+}
+
+.m_list_table {
+  margin-top: 10pt;
+  border-collapse: collapse;
+  width: 100%;
+
+  th, td {
+    border: solid 1px;
+    padding: 4pt;
+  }
+
+  th {
+    font-weight: variable.$fw-700;
+    text-align: center;
+  }
+
+}
+
+.print_button {
+  text-align: center;
+
+  span {
+    padding: 4pt;
+  }
+}
+
+.m_data_list {
+  display: flex;
+}
+
+.m_data_title {
+  flex: 0 0 45mm;
+
+  h2 {
+    font-weight: variable.$fw-700;
+  }
+}
+
+.m_data {
+}
+
+.image_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10pt;
+  margin-top: 10pt;
+}
+
+.image_area_figure {
+  display: flex;
+  //border: 1px solid variable.$black;
+  flex-flow: column;
+  //padding: 3pt;
+
+  figcaption {
+    text-align: center;
+  }
+}
