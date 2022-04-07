@@ -100,13 +100,14 @@ const PrintScreen = ({location, data}) => {
           </div>
           <div className="h_data">
             <p>特定非営利活動法人名古屋シティ・フォレスター倶楽部</p>
+            <p>{record.id}</p>
             <p>{record.changed}</p>
             <p>担当者 </p>
             <p>nagoya-forester.or.jp</p>
           </div>
         </div>
         <div className="main">
-          <h1 className="m_title">活動記録<br/>{record.id}</h1>
+          <h1 className="m_title">活動記録</h1>
           <div className="m_display">
             <h2>活動日時</h2>
             <p>{record.field_start_time}～{record.field_end_time}</p>
