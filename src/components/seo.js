@@ -29,6 +29,7 @@ const Seo = (props) => {
       {/* common */}
       <html lang={site.siteMetadata.lang} />
       <title>{title}</title>
+      <meta name="robots" content="noindex" />
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
     </Helmet>
