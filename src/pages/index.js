@@ -6,6 +6,9 @@ import Seo from "../components/seo";
 // query
 export const query = graphql`
     query {
+        currentBuildDate {
+            currentDate
+        }
         allNodeRecord(sort: {fields: field_start_time, order: DESC}) {
             edges {
                 node {
@@ -34,7 +37,7 @@ const IndexPage = ({location, data}) => {
           </div>
           <div className="h_data">
             <p>特定非営利活動法人名古屋シティ・フォレスター倶楽部</p>
-            <p>2022/04/05</p>
+            <p>{data.currentBuildDate.currentDate}</p>
             <p>nagoya-forester.or.jp</p>
           </div>
         </div>

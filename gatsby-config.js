@@ -16,6 +16,20 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-build-date`,
+      options: {
+        locales: "ja-JP",
+        options: {
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: process.env.API_URL,
