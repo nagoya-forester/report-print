@@ -8,6 +8,11 @@ import Seo from "../components/seo";
 export const query = graphql`
     query ($id: String!) {
         record: nodeRecord(id: { eq: $id }) {
+            relationships {
+                field_member {
+                    name
+                }
+            }
             id
             title
             field_start_time(formatString: "YYYY年MM月DD日HH時mm分")
@@ -46,7 +51,6 @@ export const query = graphql`
 // markup
 const PrintScreen = ({location, data}) => {
   const record = data.record
-
   //Image conversion
   function transform(node) {
     if (node.type === "tag" && node.name === "p") {
@@ -102,7 +106,7 @@ const PrintScreen = ({location, data}) => {
             <p>特定非営利活動法人名古屋シティ・フォレスター倶楽部</p>
             <p>{record.id}</p>
             <p>{record.changed}</p>
-            <p>担当者 </p>
+            {/*<p>担当者 </p>*/}
             <p>nagoya-forester.or.jp</p>
           </div>
         </div>
@@ -140,6 +144,11 @@ const PrintScreen = ({location, data}) => {
                 </p>
               </div>
             </div>
+            <ul className="m_member_name_list">
+              {record.relationships.field_member.map(({name}) => (
+                <li>{name}</li>
+              ))}
+            </ul>
           </div>
           <div className="m_data_list">
             <div className="m_data_title">
