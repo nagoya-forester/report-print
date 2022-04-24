@@ -33,11 +33,11 @@ img {
   background-color: variable.$white;
 }
 
-.a4_width {
+.index_width {
   @media screen {
     margin: 0 auto;
   }
-  width: 210mm;
+  width: 250mm;
   padding: 10mm 8mm;
   background-color: variable.$white;
 }

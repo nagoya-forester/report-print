@@ -30,7 +30,7 @@ const IndexPage = ({location, data}) => {
   return (
     <>
       <Seo />
-      <section className="a4_width">
+      <section className="index_width">
         <div className="header">
           <div className="h_image">
             <StaticImage src="../images/site_logo.png" alt="LOGO" width="320" height="80"/>
