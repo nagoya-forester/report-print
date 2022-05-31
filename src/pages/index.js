@@ -36,7 +36,7 @@ const IndexPage = ({location, data}) => {
             <StaticImage src="../images/site_logo.png" alt="LOGO" width="320" height="80"/>
           </div>
           <div className="h_data">
-            <p>特定非営利活動法人名古屋シティ・フォレスター倶楽部</p>
+            <p>特定非営利活動法人名古屋シティフォレスター倶楽部</p>
             <p>{data.currentBuildDate.currentDate}</p>
             <p>nagoya-forester.or.jp</p>
           </div>
